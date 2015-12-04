@@ -1,0 +1,16 @@
+name: ace
+version: 1.2.2
+vendor: Leo Arias <elopio@ubuntu.com>
+summary: A full featured source code highlighting editor
+description: |
+  Ace is a standalone code editor written in JavaScript.
+icon: icon.png
+services:
+  server:
+    start: node static.js
+    description: ace editor
+
+parts:
+  ace:
+    plugin: nodejs
+    source: .
