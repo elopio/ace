@@ -7,10 +7,14 @@ description: |
 icon: icon.png
 services:
   server:
-    start: node static.js
+    start: bin/ace.sh
     description: ace editor
 
 parts:
   ace:
     plugin: nodejs
     source: .
+  wrapper:
+    plugin: copy
+    files:
+      ace.sh: bin/ace.sh
